@@ -1,0 +1,135 @@
+body {
+    font-family: 'Hepta Slab', serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2 {
+    font-family: 'Hepta Slab', serif;
+    text-align: center;
+}
+
+#wrapper {
+    
+    width: 90%;
+    max-width: 960px;
+    margin: 30px auto;
+    border-radius: 6px;
+    box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid darkgray;
+
+}
+
+header {
+    background-color: aquamarine;
+    padding: 1em;
+}
+
+main {
+    background-color: honeydew;
+    padding: 1em;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(50, 50, 50);
+    padding: 1em;
+    color: #fff;
+    text-align: right;
+}
+
+#tabbed-content li {
+    display: inline-block;
+    padding: 1em;
+    background-color: darkslateblue;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fff;
+}
+
+#tabbed-content .panel{
+    display: none;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 4px;
+}
+
+#tabbed-content .panel.active{
+    display: block;
+}
+
+#add-task {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#add-task input {
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: 300px;
+    float: left;
+    clear: both;
+}
+
+#add-task button {
+    border: 1px solid #ccc;
+    background: aquamarine;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+    margin: 20px 0;
+    border-left: 0;
+}
+
+#add-task:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#add-task label{
+    line-height: 52px;
+}
+
+#task-list {
+    margin-left: 4em;
+}
+
+#task-list li {
+    display: block;
+    background-color: #fff;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #000;
+    margin: 3px;
+    text-align: left;
+    width: 600px;
+}
+
+#task-list .delete {
+    display: block;
+    float: right;
+    background-color: crimson;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.delete:hover {
+    background: darkred;
+}

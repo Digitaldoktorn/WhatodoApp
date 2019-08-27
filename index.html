@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Hepta+Slab:600&display=swap" rel="stylesheet">
+    <title>Whatodo App</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Whatodo App</h1>
+        </header>
+        <main>
+            <div id="tabbed-content">
+                <ul class="tabs">
+                    <li data-target="#personal" class="active">Personal</li>
+                    <li data-target="#job" class="active">Job</li>
+                    <li data-target="#leisure" class="active">Leisure</li>
+                </ul>
+                <div class="panel active" id="personal">
+                    <div id="task-list">
+                        <h2>Personal tasks</h2>
+                        <ul>
+                            <li>
+                                <span class="name">Clean the garage</span>
+                                <span class="delete">Delete</span>
+                            </li>
+                            <li>
+                                    <span class="name">Buy screwdriver</span>
+                                    <span class="delete">Delete</span>
+                                </li>
+                        </ul>
+                        <form id="add-task">
+                            <input type="text" placeholder="Add task...">
+                            <button>Add</button>
+                        </form>
+
+                    </div>
+
+
+                </div>
+                <div class="panel" id="job">
+                        <div id="task-list">
+                                <h2>Job tasks</h2>
+                                <ul>
+                                    <li>
+                                        <span class="name">Talk to manager</span>
+                                        <span class="delete">Delete</span>
+                                    </li>
+                                    <li>
+                                            <span class="name">Write report</span>
+                                            <span class="delete">Delete</span>
+                                        </li>
+                                </ul>
+                                <form id="add-task">
+                                    <input type="text" placeholder="Add task...">
+                                    <button>Add</button>
+                                </form>
+        
+                            </div>
+                </div>
+                <div class="panel" id="leisure">
+                        <div id="task-list">
+                                <h2>Leisure tasks</h2>
+                                <ul>
+                                    <li>
+                                        <span class="name">Plan Greece trip</span>
+                                        <span class="delete">Delete</span>
+                                    </li>
+                                    <li>
+                                            <span class="name">Buy concert tickets</span>
+                                            <span class="delete">Delete</span>
+                                        </li>
+                                </ul>
+                                <form id="add-task">
+                                    <input type="text" placeholder="Add task...">
+                                    <button>Add</button>
+                                </form>
+        
+                            </div>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <small>&copy; Whatodo App by Digitaldoktorn</small>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
