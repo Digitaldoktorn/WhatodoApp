@@ -23,11 +23,10 @@ document.addEventListener('DOMContentLoaded', function(){
         // add content
         taskName.textContent = value
         deleteBtn.textContent = 'delete'
-
+        
         // add classes
         taskName.classList.add('name')
         deleteBtn.classList.add('delete')
-
 
         // append to DOM - the order matters
         li.appendChild(taskName)
@@ -45,6 +44,34 @@ document.addEventListener('DOMContentLoaded', function(){
             list.style.display = 'initial'
         }
     })
+
+    // filter tasks
+    const searchBar = document.forms['search-tasks'].querySelector('input')
+    searchBar.addEventListener('keyup', function(e){
+        const term = e.target.value.toLowerCase()
+        const tasks = list.getElementsByTagName('li')
+        Array.from(tasks).forEach(function(task){
+            const title = task.firstElementChild.textContent
+            if(title.toLowerCase().indexOf(term) != -1){
+                task.style.display = 'block'
+            } else {
+                task.style.display = 'none'
+            }
+        })
+    })
     
-    
+    // tabbed content
+    const tabs = document.querySelector('.tabs')
+    const panels = document.querySelectorAll('.panel')
+    tabs.addEventListener('click', function(e){
+        const targetPanel = document.querySelector(e.target.dataset.tabtarget)
+        panels.forEach(function(panel){
+            if(panel == targetPanel){
+                panel.classList.add('active')
+            } else {
+                panel.classList.remove('active')
+            }
+        })
+
+    })
 })
