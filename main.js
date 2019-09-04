@@ -19,16 +19,19 @@ document.addEventListener('DOMContentLoaded', function(){
         const li = document.createElement('li')
         const taskName = document.createElement('span')
         const deleteBtn = document.createElement('span')
+        const checkBox = document.createElement('input')
+        checkBox.setAttribute("type", "checkbox")
 
         // add content
         taskName.textContent = value
-        deleteBtn.textContent = 'delete'
+        deleteBtn.textContent = 'X'
         
         // add classes
         taskName.classList.add('name')
         deleteBtn.classList.add('delete')
 
         // append to DOM - the order matters
+        li.appendChild(checkBox)
         li.appendChild(taskName)
         li.appendChild(deleteBtn)
         list.appendChild(li)
