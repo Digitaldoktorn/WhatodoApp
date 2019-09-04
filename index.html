@@ -8,91 +8,74 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Hepta+Slab:600&display=swap" rel="stylesheet">
     <title>Whatodo App</title>
+    <script src="main.js"></script>
 </head>
 
 <body>
     <div id="wrapper">
-        <header>
-            <h1>Whatodo App</h1>
-        </header>
-        <main>
-            <div id="tabbed-content">
-                <ul class="tabs">
-                    <li data-target="#personal" class="active">Personal</li>
-                    <li data-target="#job" class="active">Job</li>
-                    <li data-target="#leisure" class="active">Leisure</li>
-                </ul>
-                <div class="panel active" id="personal">
-                    <div id="task-list">
-                        <h2>Personal tasks</h2>
-                        <ul>
-                            <li>
-                                <span class="name">Clean the garage</span>
-                                <span class="delete">Delete</span>
-                            </li>
-                            <li>
-                                    <span class="name">Buy screwdriver</span>
-                                    <span class="delete">Delete</span>
-                                </li>
-                        </ul>
-                        <form id="add-task">
-                            <input type="text" placeholder="Add task...">
-                            <button>Add</button>
-                        </form>
-
-                    </div>
-
-
-                </div>
-                <div class="panel" id="job">
-                        <div id="task-list">
-                                <h2>Job tasks</h2>
-                                <ul>
-                                    <li>
-                                        <span class="name">Talk to manager</span>
-                                        <span class="delete">Delete</span>
-                                    </li>
-                                    <li>
-                                            <span class="name">Write report</span>
-                                            <span class="delete">Delete</span>
-                                        </li>
-                                </ul>
-                                <form id="add-task">
-                                    <input type="text" placeholder="Add task...">
-                                    <button>Add</button>
-                                </form>
-        
-                            </div>
-                </div>
-                <div class="panel" id="leisure">
-                        <div id="task-list">
-                                <h2>Leisure tasks</h2>
-                                <ul>
-                                    <li>
-                                        <span class="name">Plan Greece trip</span>
-                                        <span class="delete">Delete</span>
-                                    </li>
-                                    <li>
-                                            <span class="name">Buy concert tickets</span>
-                                            <span class="delete">Delete</span>
-                                        </li>
-                                </ul>
-                                <form id="add-task">
-                                    <input type="text" placeholder="Add task...">
-                                    <button>Add</button>
-                                </form>
-        
-                            </div>
-                </div>
+        <header id="whatodo">
+            <div id="page-banner">
+                <h1>Whatodo App</h1>
+                <a href="http://www.thenetninja.co.uk">The Net Ninja</a>
+                <form id="search-tasks">
+                    <input type="text" placeholder="Search tasks...">
+                </form>
             </div>
 
-        </main>
+        </header>
+        <div id="task-list">
+            <h2 class="title">Tasks</h2>
+            <ul>
+                <li>
+                    <span class="name">Buy grouceries</span>
+                    <span class="delete">Delete</span>
+                </li>
+                <li>
+                    <span class="name">Go to the gym</span>
+                    <span class="delete">Delete</span>
+                </li>
+                <li>
+                    <span class="name">Fix the fence</span>
+                    <span class="delete">Delete</span>
+                </li>
+                <li>
+                    <span class="name">Wash the car</span>
+                    <span class="delete">Delete</span>
+                </li>
+            </ul>
+        </div>
+        <form id="add-task">
+            <input type="checkbox" id="hide">
+            <label for="hide">Hide tasks</label>
+            <input type="text" placeholder="Add task...">
+            <button>Add</button>
+        </form>
+        <div id="tabbed-content">
+            <ul class="tabs">
+                <li data-target="#about" class="active">About</li>
+                <li data-target="#contact" class="contact">Contact</li>
+            </ul>
+            <div class="panel active" id="about">
+                <p>Content for about tab...</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis doloremque placeat natus rem
+                    veritatis! Labore impedit aliquid debitis fugit iste, quidem inventore recusandae voluptatum
+                    reiciendis laudantium architecto veniam voluptatem mollitia!</p>
+
+            </div>
+            <div class="panel" id="contact">
+                <p>Content for contact tab</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, optio vitae quasi nulla quibusdam
+                    voluptas architecto cupiditate perferendis exercitationem neque dolore molestiae? Dicta quibusdam,
+                    iure doloribus voluptatem maiores dolorem tempora.</p>
+            </div>
+        </div>
+
         <footer>
             <small>&copy; Whatodo App by Digitaldoktorn</small>
         </footer>
     </div>
 
-    <script src="main.js"></script>
+    
 </body>
 
 </html>

@@ -1,64 +1,75 @@
-body {
-    font-family: 'Hepta Slab', serif;
-    font-family: 'Roboto', sans-serif;
+body{
+    font-family: Tahoma;
+    color: #444;
+    letter-spacing: 1px;
 }
 
-h1,h2 {
-    font-family: 'Hepta Slab', serif;
-    text-align: center;
+h1, h2 {
+    font-weight: normal;
 }
 
 #wrapper {
-    
     width: 90%;
-    max-width: 960px;
-    margin: 30px auto;
+    max-width: 960px;   
+    margin: 20px auto;
     border-radius: 6px;
-    box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
     box-sizing: border-box;
+    padding: 0 0 20px;
     overflow: hidden;
-    border: 1px solid darkgray;
-
+    border: 1px solid lightgray;
 }
 
-header {
-    background-color: aquamarine;
-    padding: 1em;
+#page-banner{
+    background: #eee;
+    padding: 10px 0;
 }
-
-main {
-    background-color: honeydew;
-    padding: 1em;
+#page-banner h1, #page-banner p{
+    width: 100%;
     text-align: center;
+    margin: 10px 0;
 }
 
-footer {
-    background-color: rgb(50, 50, 50);
-    padding: 1em;
-    color: #fff;
-    text-align: right;
+#page-banner input{
+    width: 90%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #444;
 }
 
-#tabbed-content li {
-    display: inline-block;
-    padding: 1em;
-    background-color: darkslateblue;
+#task-list, #add-task, #tabbed-content{
+    margin: 30px;
+}
+
+#task-list ul, #tabbed-content ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li{
+    padding: 20px;
+    border-left: 5px solid #ddd;
+    margin: 20px 10px;
+}
+#task-list li:hover{
+    border-color: #9361bf;
+}
+.delete{
+    float: right;
+    background: #9361bf;
+    padding: 6px;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 10px;
-    color: #fff;
+    color: white;
 }
 
-#tabbed-content .panel{
-    display: none;
-    border: 1px solid #ddd;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 4px;
-}
-
-#tabbed-content .panel.active{
-    display: block;
+.delete:hover {
+    background: #333;
 }
 
 #add-task {
@@ -66,7 +77,7 @@ footer {
     margin: 0 auto;
 }
 
-#add-task input {
+#add-task input{
     display: block;
     margin: 20px 0;
     padding: 10px;
@@ -80,8 +91,8 @@ footer {
 }
 
 #add-task button {
-    border: 1px solid #ccc;
-    background: aquamarine;
+    border: 1px solid #9361bf;
+    background: #9361bf;
     padding: 10px 20px;
     font-size: 16px;
     display: inline-block;
@@ -92,6 +103,7 @@ footer {
     float: left;
     margin: 20px 0;
     border-left: 0;
+    color: white;
 }
 
 #add-task:after{
@@ -100,36 +112,30 @@ footer {
     clear: both;
 }
 
+#add-task #hide{
+    width: 30px;
+}
+
 #add-task label{
     line-height: 52px;
 }
 
-#task-list {
-    margin-left: 4em;
-}
-
-#task-list li {
-    display: block;
-    background-color: #fff;
-    padding: 8px;
-    cursor: pointer;
-    margin-right: 10px;
-    color: #000;
-    margin: 3px;
-    text-align: left;
-    width: 600px;
-}
-
-#task-list .delete {
-    display: block;
-    float: right;
-    background-color: crimson;
-    padding: 6px;
+#tabbed-content li{
+    display: inline-block;
+    padding: 10px 14px;
+    background: #ddd;
     border-radius: 4px;
     cursor: pointer;
-    color: #fff;
+    margin-right: 10px;
 }
 
-.delete:hover {
-    background: darkred;
+#tabbed-content .panel{
+    display: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+    border-radius: 4px;
+}
+
+#tabbed-content .panel.active{
+    display: block;
 }
