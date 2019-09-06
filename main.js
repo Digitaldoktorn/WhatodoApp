@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const taskName = document.createElement('span')
         const deleteBtn = document.createElement('span')
         const checkBox = document.createElement('input')
+        const space = document.createElement('span')
+        space.innerHTML += '&nbsp;'
         checkBox.setAttribute("type", "checkbox")
 
         // add content
@@ -32,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // append to DOM - the order matters
         li.appendChild(checkBox)
+        li.appendChild(space)
         li.appendChild(taskName)
         li.appendChild(deleteBtn)
         list.appendChild(li)
