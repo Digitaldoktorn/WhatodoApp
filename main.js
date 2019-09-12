@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
     addForm.addEventListener('submit', function(e){
         e.preventDefault()
         const value = addForm.querySelector('input[type="text"]').value
+        const inputAdd = document.getElementById('inputAdd')
 
-        // create elements
+        // 1. create elements
         const li = document.createElement('li')
         const taskName = document.createElement('span')
         const deleteBtn = document.createElement('span')
@@ -24,32 +25,35 @@ document.addEventListener('DOMContentLoaded', function(){
         space.innerHTML += '&nbsp;'
         checkBox.setAttribute("type", "checkbox")
 
-        // add content
+        // 3. add content
         taskName.textContent = value
         deleteBtn.textContent = 'X'
-        
-        // add classes
+
+        // 4. add classes
         taskName.classList.add('name')
         deleteBtn.classList.add('delete')
 
-        // append to DOM - the order matters
+        // 2. append to DOM - the order matters
         li.appendChild(checkBox)
         li.appendChild(space)
         li.appendChild(taskName)
         li.appendChild(deleteBtn)
         list.appendChild(li)
 
+        inputAdd.value = ''
+        inputAdd.focus()
+
     })
 
     // hide tasks
-    const hideBox = document.querySelector('#hide')
-    hideBox.addEventListener('change', function(e){
-        if(hideBox.checked){
-            list.style.display = 'none'
-        } else {
-            list.style.display = 'initial'
-        }
-    })
+    // const hideBox = document.querySelector('#hide')
+    // hideBox.addEventListener('change', function(e){
+    //     if(hideBox.checked){
+    //         list.style.display = 'none'
+    //     } else {
+    //         list.style.display = 'initial'
+    //     }
+    // })
 
     // filter tasks
     const searchBar = document.forms['search-tasks'].querySelector('input')
@@ -70,14 +74,15 @@ document.addEventListener('DOMContentLoaded', function(){
     const tabs = document.querySelector('.tabs')
     const panels = document.querySelectorAll('.panel')
     tabs.addEventListener('click', function(e){
-        const targetPanel = document.querySelector(e.target.dataset.tabtarget)
-        panels.forEach(function(panel){
-            if(panel == targetPanel){
-                panel.classList.add('active')
-            } else {
-                panel.classList.remove('active')
-            }
-        })
-
+        if(e.target.tagName == "LI"){
+            const targetPanel = document.querySelector(e.target.dataset.target)
+            panels.forEach(function(panel){
+                if(panel == targetPanel){
+                    panel.classList.add('active')
+                } else {
+                    panel.classList.remove('active')
+                }
+            })
+        }
     })
 })

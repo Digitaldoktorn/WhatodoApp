@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Lora&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Lora&display=swap" rel="stylesheet">
     <title>Whatodo?</title>
     <script src="main.js"></script>
 </head>
@@ -23,61 +23,56 @@
 
         </header>
         <div id="tabbed-content">
-            <ul class="tabs">
-                <li data-tabtarget="#about" class="active">About</li>
-                <li data-tabtarget="#contact" class="contact">Contact</li>
-            </ul>
-            <div class="panel active" id="about">
-                <p>Welcome to Whatodo? Add your tasks to the list and start getting productive!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, officia odio provident aut, eius assumenda cumque aperiam eum vitae odit nemo, unde quod! Pariatur magnam nihil voluptas fuga accusamus eaque?</p>
+			<ul class="tabs">
+				<li data-target="#about" class="active">About</li>
+				<li data-target="#contact" class="contact">Contact</li>
+			</ul>
+			<div class="panel active" id="about">
+				<p>Content for about tab...</p>
 
-            </div>
-            <div class="panel" id="contact">
-                <p>Content for contact tab</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, optio vitae quasi nulla quibusdam
-                    voluptas architecto cupiditate perferendis exercitationem neque dolore molestiae? Dicta quibusdam,
-                    iure doloribus voluptatem maiores dolorem tempora.</p>
-            </div>
-        </div>
+			</div>
+			<div class="panel" id="contact">
+				<p>Content for contact tab...</p>
+
+			</div>
+		</div>
         <div id="task-list">
             <h2 class="title">Tasks</h2>
             <ul>
                 <li>
-                    <input type="checkbox" name="checkTask" class="checkTask">
-                    <span class="name">Buy grouceries</span>
+                    <input id="checkTask" type="checkbox" name="checkTask" class="checkTask">
+                    <label for="checkTask">Buy grouceries</label>
                     <span class="delete">X</span>
                 </li>
                 <li>
-                    <input type="checkbox" name="checkTask" class="checkTask"></button>
-                    <span class="name">Go to the gym</span>
+                    <input id="checkTask" type="checkbox" name="checkTask" class="checkTask">
+                    <label for="checkTask">Clean the garage</label>
                     <span class="delete">X</span>
                 </li>
                 <li>
-                    <input type="checkbox" name="checkTask" class="checkTask"></button>
-                    <span class="name">Fix the fence</span>
+                    <input id="checkTask" type="checkbox" name="checkTask" class="checkTask">
+                    <label for="checkTask">Call insurance</label>
                     <span class="delete">X</span>
                 </li>
-                <li>
-                    <input type="checkbox" name="checkTask" class="checkTask"></button>
-                    <span class="name">Wash the car</span>
-                    <span class="delete">X</span>
-                </li>
+                
             </ul>
         </div>
         <form id="add-task">
             <!-- <input type="checkbox" id="hide">
             <label for="hide">Hide tasks</label> -->
-            <input type="text" placeholder="Add task...">
+            <input id="inputAdd" type="text" placeholder="Add task..." required>
             <button>Add</button>
         </form>
-        
+
+
+
 
         <footer>
             <small>&copy; Whatodo? by Digitaldoktorn</small>
         </footer>
     </div>
 
-    
+
 </body>
 
 </html>

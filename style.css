@@ -66,8 +66,19 @@ header h1 {
 #task-list li{
     padding: 10px;
 }
+
 #task-list li:hover{
     background: white;
+}
+
+input[type=checkbox] + label {
+    color: #444;
+    font-style: normal;
+}
+
+input[type=checkbox]:checked + label {
+    color: rgb(110, 184, 162);
+    font-style: italic;
 }
 .delete{
     position: relative;
@@ -104,6 +115,7 @@ header h1 {
     float: left;
     clear: both;
 }
+
 
 #add-task button {
     border: 1px solid rgb(95, 137, 192);
