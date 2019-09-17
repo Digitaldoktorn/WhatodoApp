@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     })
 
-    // add books
+    // add tasks
     const addForm = document.forms['add-task']
     addForm.addEventListener('submit', function(e){
         e.preventDefault()
@@ -18,12 +18,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // 1. create elements
         const li = document.createElement('li')
+        // const taskName = document.createElement('label')
         const taskName = document.createElement('span')
         const deleteBtn = document.createElement('span')
-        const checkBox = document.createElement('input')
-        const space = document.createElement('span')
-        space.innerHTML += '&nbsp;'
-        checkBox.setAttribute("type", "checkbox")
+        // const checkBox = document.createElement('input')
+        // const space = document.createElement('span')
+        // space.innerHTML += '&nbsp;'
+        // checkBox.setAttribute("type", "checkbox")
+        // checkBox.setAttribute("id", "checkTask")
+        // taskName.htmlFor = 'checkTask'
 
         // 3. add content
         taskName.textContent = value
@@ -34,15 +37,28 @@ document.addEventListener('DOMContentLoaded', function(){
         deleteBtn.classList.add('delete')
 
         // 2. append to DOM - the order matters
-        li.appendChild(checkBox)
-        li.appendChild(space)
+        // li.appendChild(checkBox)
+        // li.appendChild(space)
         li.appendChild(taskName)
         li.appendChild(deleteBtn)
         list.appendChild(li)
 
+        // reset field and focus
         inputAdd.value = ''
         inputAdd.focus()
 
+        // change color of checked tasks
+        
+        // checkBox.addEventListener('change', (e) => {
+        //     if(e.target.checked){
+        //         taskName.classList.add('checked')
+        //         // console.log('checked');
+                
+        //     } else {
+        //         // console.log('unchecked');
+        //         taskName.classList.add('unchecked')
+        //     }
+        // })
     })
 
     // hide tasks

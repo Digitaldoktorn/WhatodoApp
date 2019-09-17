@@ -78,12 +78,10 @@ input[type=checkbox] + label {
 
 input[type=checkbox]:checked + label {
     color: rgb(110, 184, 162);
-    font-style: italic;
 }
 .delete{
     position: relative;
     bottom: 5px;
-
     float: right;
     background: rgba(255, 35, 35, 0.7);
     padding: 6px;
@@ -94,6 +92,14 @@ input[type=checkbox]:checked + label {
 
 .delete:hover {
     background: rgb(255, 35, 35);
+}
+
+.checked {
+    color: rgb(110, 184, 162);
+}
+
+.unchecked {
+    color: #444;
 }
 
 #add-task {
@@ -174,4 +180,61 @@ footer{
     background: rgba(255, 35, 35, 0.1);
     text-align: center;
     padding: 2em;
+}
+
+/* smartphone */
+@media screen and (max-width: 500px){
+    header h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: .8em;
+    }
+
+    li {
+        font-size: .8em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    #page-banner input{
+        width: 50%;
+    }
+
+    #tabbed-content li{
+        padding: 5px 8px;
+        margin-bottom: 3px;
+    }
+
+    #add-task input{
+        display: block;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 3px 0 0 3px;
+        box-sizing: border-box;
+        width: 210px;
+        margin-left: 30px;
+
+    }
+
+    #add-task button {
+        padding: 5px;
+        font-size: 14px;
+        margin: 7px 0 25px 0;
+        border-radius: 0 3px 3px 0;
+        cursor: pointer;
+        width: 60px;
+        margin: 10px 0;
+    }
+
+    footer {
+        padding: 1em;
+    }
+
+    small {
+        font-size: 0.6em;
+    }
 }
